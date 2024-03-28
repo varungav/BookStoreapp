@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import list from "../../public/list.json"
 import Slider from "react-slick";
 
 import axios from "axios";
 
 import Cards from "./Cards";
 function Freebook() {
-  const filterDate=list.filter((data)=>data.category==="Free");
   const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
